@@ -1,5 +1,6 @@
-import { ArrowRight, Droplets, Flower2, Recycle, Sprout, Trees, UsersRound } from 'lucide-react'
+import { Droplets, Flower2, Recycle, Sprout, UsersRound } from 'lucide-react'
 import Header from './components/Header'
+import Hero from './components/Hero'
 import Section from './components/Section'
 import { ecologicalBenefits, focusAreas, portfolioItems, services, steps } from './data/siteContent'
 import './styles.css'
@@ -13,31 +14,7 @@ export default function App() {
     <>
       <Header />
       <main>
-        <section id="home" className="hero hero-video" aria-label="Hero met rustig bewegend sfeerbeeld van een ecologische stadstuin">
-          <video
-            className="hero-media"
-            aria-hidden="true"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/images/hero-ecologische-stadstuin-amsterdam.webp"
-          >
-            <source src="/videos/hero-wuivende-bloemen.webm" type="video/webm" />
-            <source src="/videos/hero-wuivende-bloemen.mp4" type="video/mp4" />
-          </video>
-          <div className="hero-fallback" aria-hidden="true"></div>
-          <div className="hero-overlay" aria-hidden="true"></div>
-          <div className="hero-content">
-            <p className="eyebrow">De Wilde Tuinvrouw</p>
-            <h1>Ecologisch tuinontwerp voor levende stadstuinen</h1>
-            <p className="lead">De Wilde Tuinvrouw ontwerpt ecologische tuinen waarin mensen, kinderen, planten en dieren zich thuis voelen. Van stadstuin tot gezinstuin, van geveltuin tot groen schoolplein: een levende plek met inheemse beplanting, waterwijze keuzes en aandacht voor bodem, biodiversiteit en dagelijks gebruik.</p>
-            <div className="button-row">
-              <a className="button primary" href="#contact">Plan een kennismaking <ArrowRight size={18} /></a>
-              <a className="button secondary" href="#werkwijze">Bekijk mijn werkwijze</a>
-            </div>
-          </div>
-        </section>
+        <Hero />
 
         <Section eyebrow="Waarmee ik help" title="Drie diensten voor een tuin die leeft">
           <div className="grid three">

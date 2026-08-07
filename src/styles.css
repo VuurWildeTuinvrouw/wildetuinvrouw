@@ -27,10 +27,10 @@ p { color: var(--muted); line-height: 1.7; font-size: 1.02rem; }
 .nav-cta, .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 1px solid transparent; }
 .nav-cta, .button.primary { background: var(--green); color: white; }
 .button.secondary { background: transparent; border-color: var(--line); }
- .hero { display: grid; grid-template-columns: 1fr; min-height: 88vh; align-items: center; padding: clamp(72px, 8vw, 120px) clamp(18px, 5vw, 72px); }
+.hero { display: grid; grid-template-columns: 1fr; min-height: 88vh; align-items: center; padding: clamp(72px, 8vw, 120px) clamp(18px, 5vw, 72px); }
 .hero-video { position: relative; overflow: hidden; isolation: isolate; background: #10291f; color: #fffaf0; }
 .hero-media, .hero-fallback { position: absolute; inset: 0; z-index: -3; width: 100%; height: 100%; object-fit: cover; object-position: 58% 50%; }
-.hero-media { transform: scale(1.02); animation: subtleVideoDrift 28s ease-out infinite alternate; will-change: transform; }
+.hero-media { transform: scale(1.02); }
 .hero-fallback { z-index: -4; background-image: url("/images/hero-ecologische-stadstuin-amsterdam.webp"); background-size: cover; background-position: 58% 50%; transform: scale(1.02); }
 .hero-overlay { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(13, 35, 26, .84) 0%, rgba(13, 35, 26, .64) 42%, rgba(13, 35, 26, .26) 100%), linear-gradient(0deg, rgba(13, 35, 26, .48), rgba(13, 35, 26, .08) 38%); }
 .hero-content { max-width: 820px; }
@@ -40,8 +40,7 @@ p { color: var(--muted); line-height: 1.7; font-size: 1.02rem; }
 .button-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
 .hero-video .button.primary { background: var(--sage); color: #10291f; }
 .hero-video .button.secondary { border-color: rgba(255,250,240,.58); color: #fffaf0; background: rgba(255,250,240,.06); backdrop-filter: blur(8px); }
-@keyframes subtleVideoDrift { from { transform: scale(1.02); } to { transform: scale(1.08); } }
-@media (prefers-reduced-motion: reduce) { .hero-media { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .hero-media { display: none; } }
 .section { padding: clamp(54px, 7vw, 96px) clamp(18px, 5vw, 72px); border-top: 1px solid var(--line); }
 .section-heading { max-width: 820px; margin-bottom: 30px; }
 h2 { font-size: clamp(2rem, 3.8vw, 3.4rem); line-height: 1.04; letter-spacing: -.045em; margin: 0; }
@@ -84,7 +83,7 @@ button { cursor: pointer; font: inherit; }
 @media (max-width: 560px) {
   .site-header { align-items: flex-start; }
   .nav-cta { display: none; }
-  .hero { min-height: 78vh; padding-top: 84px; }
+ .hero { min-height: 78vh; padding-top: 84px; }
   .hero-overlay { background: rgba(13, 35, 26, .66); }
   .hero-media, .hero-fallback { object-position: 62% 50%; background-position: 62% 50%; }
   .site-footer { display: block; }
