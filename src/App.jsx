@@ -30,7 +30,7 @@ export default function App() {
           <div className="hero-overlay" aria-hidden="true"></div>
           <div className="hero-content">
             <p className="eyebrow">De Wilde Tuinvrouw</p>
-            <h1>Ecologisch tuinontwerp voor levende stadstuinen rond Amsterdam</h1>
+            <h1>Ecologisch tuinontwerp voor levende stadstuinen</h1>
             <p className="lead">De Wilde Tuinvrouw ontwerpt ecologische tuinen waarin mensen, kinderen, planten en dieren zich thuis voelen. Van stadstuin tot gezinstuin, van geveltuin tot groen schoolplein: een levende plek met inheemse beplanting, waterwijze keuzes en aandacht voor bodem, biodiversiteit en dagelijks gebruik.</p>
             <div className="button-row">
               <a className="button primary" href="#contact">Plan een kennismaking <ArrowRight size={18} /></a>
