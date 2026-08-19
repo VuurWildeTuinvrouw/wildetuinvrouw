@@ -1,72 +1,11 @@
-export const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'Tuinontwerp', href: '#tuinontwerp' },
-  { label: 'Beplantingsplan', href: '#beplantingsplan' },
-  { label: 'Natuureducatie', href: '#natuureducatie' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Over mij', href: '#over' },
-  { label: 'Contact', href: '#contact' }
+export const disciplines = [
+  { no: '01', title: 'Tuinontwerp', text: 'Een ontwerp dat vertrekt vanuit bodem, licht, water, gebruik en wat er al leeft.' },
+  { no: '02', title: 'Natuureducatie', text: 'Buiten leren door te kijken, te onderzoeken en zelf onderdeel te worden van de plek.' },
+  { no: '03', title: 'Groene schoolpleinen', text: 'Levende speel- en leeromgevingen die met kinderen, planten en seizoenen meegroeien.' }
 ]
 
-export const services = [
-  {
-    title: 'Tuinontwerp',
-    text: 'Van tuinanalyse, vlekkenplan en schetsontwerp tot een compleet ecologisch tuinontwerp dat praktisch werkt en past bij bodem, water, licht en gebruik.'
-  },
-  {
-    title: 'Beplantingsplan & aanlegbegeleiding',
-    text: 'Inheemse, eetbare en diervriendelijke beplanting, afgestemd op de plek. Met begeleiding zodat het plan niet op papier blijft, maar goed landt in de praktijk.'
-  },
-  {
-    title: 'Natuureducatie & groene schoolpleinen',
-    text: 'Ontwerp, groencoaching, lessen en workshops die kinderen, ouders en docenten betrekken bij levende buitenruimtes.'
-  }
-]
-
-export const steps = [
-  'Kennismaking',
-  'Tuinanalyse',
-  'Ontwerp of beplantingsplan',
-  'Aanlegbegeleiding',
-  'Groencoaching en nazorg'
-]
-
-export const portfolioItems = [
-  {
-    title: 'Kindvriendelijke stadstuin',
-    location: 'Amsterdam',
-    tags: ['Stadstuin', 'Gezinstuin', 'Aanlegbegeleiding'],
-    text: 'Meer leven, speelruimte en seizoensbeleving zonder dat de tuin druk of onoverzichtelijk wordt. Met zachte overgangen, robuuste beplanting en eetbare elementen.'
-  },
-  {
-    title: 'Beplantingsplan voor eetbare siertuin',
-    location: 'Haarlem',
-    tags: ['Beplantingsplan', 'Eetbaar', 'Vlinders'],
-    text: 'Een combinatie van schoonheid en gebruik, met bloeiende vaste planten, kruiden, eetbare soorten en beplanting die aantrekkelijk is voor insecten.'
-  },
-  {
-    title: 'Geveltuin met inheemse beplanting',
-    location: 'Zaandam',
-    tags: ['Geveltuin', 'Inheems', 'Biodiversiteit'],
-    text: 'Een smalle strook groen als kleine stapsteen voor stedelijke biodiversiteit, afgestemd op warmte, beperkte ruimte en wisselende vochtigheid.'
-  }
-]
-
-export const ecologicalBenefits = [
-  'Inheemse beplanting',
-  'Meer vogels, vlinders en bodemleven',
-  'Waterwijs ontwerp',
-  'Hergebruik van materialen en minimale verspilling'
-]
-
-export const focusAreas = [
-  'ecologisch tuinontwerp',
-  'kindvriendelijke tuinen',
-  'inheemse beplanting',
-  'vlinder- en vogeltuinen',
-  'waterwijze tuinen en klimaattuinen',
-  'kringlooptuinen',
-  'geveltuinen, balkons en daktuinen',
-  'groene schoolpleinen',
-  'natuureducatie en workshops'
+export const projects = [
+  { title: 'Van stenen plaats naar stadstuin', meta: 'Tuinontwerp · aanleg · beplanting', image: '/images/project-transformatie.jpg', className: 'project project--wide' },
+  { title: 'Een tuin als leefgebied', meta: 'Gezinstuin · biodiversiteit', image: '/images/project-stadstuin.jpg', className: 'project project--portrait' },
+  { title: 'Lopen tussen het groen', meta: 'Hergebruik · beplantingsplan', image: '/images/project-pad.jpg', className: 'project project--landscape' }
 ]

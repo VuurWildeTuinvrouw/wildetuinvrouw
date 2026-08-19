@@ -1,116 +1,54 @@
-import { Droplets, Flower2, Recycle, Sprout, UsersRound } from 'lucide-react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Section from './components/Section'
-import { ecologicalBenefits, focusAreas, portfolioItems, services, steps } from './data/siteContent'
-import './styles.css'
-
-function Card({ title, text, children }) {
-  return <article className="card"><h3>{title}</h3>{text && <p>{text}</p>}{children}</article>
-}
+import { disciplines, projects } from './data/siteContent'
 
 export default function App() {
-  return (
-    <>
-      <Header />
-      <main>
-        <Hero />
+  return <main>
+    <Header />
+    <Hero />
 
-        <Section eyebrow="Waarmee ik help" title="Drie diensten voor een tuin die leeft">
-          <div className="grid three">
-            {services.map((service) => <Card key={service.title} {...service} />)}
-          </div>
-        </Section>
+    <Section className="manifest">
+      <img className="field-icon field-icon--fern" src="/images/varen.png" alt="" />
+      <p className="eyebrow">Lentevuur</p>
+      <blockquote>De natuur geeft de plek haar ritme.</blockquote>
+      <p className="manifest-text">Mensen, planten en dieren bewegen mee met de seizoenen. Daarom ontwerp ik geen plaatje, maar een levende plek — gevormd door wat er al is en wat er kan ontstaan.</p>
+    </Section>
 
-        <Section id="tuinontwerp" eyebrow="Tuinontwerp" title="Ecologisch tuinontwerp voor stadstuinen en gezinstuinen" className="split">
-          <div>
-            <p>Een ecologisch tuinontwerp gaat verder dan mooie planten kiezen. Ik kijk naar de plek als geheel: bodem, water, licht, wind, bestaande materialen, dagelijks gebruik en de planten en dieren in de omgeving.</p>
-            <p>Geschikt voor stadstuinen, gezinstuinen, pionierstuinen, schaduwtuinen, klimaattuinen, eetbare siertuinen, geveltuinen, balkons, daktuinen en tuinen met meer ruimte voor vogels, vlinders en andere dieren.</p>
-            <a className="inline-link" href="#contact">Vraag een tuinontwerp aan</a>
-          </div>
-          <div className="feature-list">
-            <span>Vlekkenplan</span><span>Tuinanalyse</span><span>Schetsontwerp</span><span>Compleet tuinontwerp</span><span>Kindvriendelijke ecologische tuin</span>
-          </div>
-        </Section>
+    <Section className="disciplines" id="disciplines">
+      <div className="section-intro"><p className="eyebrow">Drie disciplines</p><h2>Observeren.<br />Ontwerpen. Doen.</h2></div>
+      <div className="discipline-list">
+        {disciplines.map(item => <article className="discipline" key={item.no}><span>{item.no}</span><h3>{item.title}</h3><p>{item.text}</p><a href="#contact" aria-label={`Meer over ${item.title}`}>↗</a></article>)}
+      </div>
+    </Section>
 
-        <Section id="beplantingsplan" eyebrow="Beplantingsplan & aanlegbegeleiding" title="Van plantenlijst naar uitvoerbaar ecologisch plan" className="split muted">
-          <div>
-            <p>Een beplantingsplan is meer dan een lijst met planten. Het is een doordachte opbouw van lagen, bloeitijden, structuren, kleuren, hoogtes en functies.</p>
-            <p>Ik werk met planten die passen bij bodem, licht, water, gebruik en de dieren die je wilt ondersteunen. Waar mogelijk kies ik voor grotendeels inheemse beplanting, aangevuld met passende eetbare of sierlijke soorten.</p>
-          </div>
-          <Card title="Aanlegbegeleiding" text="Meedenken over aanlegvolgorde, overleg met een hovenier, plantselectie, bodemvoorbereiding, begeleiding tijdens een plantdag en groencoaching na aanleg." />
-        </Section>
+    <Section className="work" id="werk">
+      <div className="work-heading"><p className="eyebrow">Selectie van het werk</p><h2>Van eerste lijn<br />tot levende tuin.</h2><p>Ontwerp en uitvoering horen bij elkaar. Iedere plek begint met aandachtig kijken en krijgt vorm in schetsen, materiaal en beplanting.</p></div>
+      <div className="project-grid">
+        {projects.map(project => <figure className={project.className} key={project.title}><div className="image-wrap"><img src={project.image} alt={project.title} /></div><figcaption><p>{project.meta}</p><h3>{project.title}</h3></figcaption></figure>)}
+      </div>
+    </Section>
 
-        <Section id="natuureducatie" eyebrow="Natuureducatie" title="Groene schoolpleinen, natuurlessen en workshops">
-          <div className="grid two">
-            <Card title="Groene schoolpleinen" text="Een groen schoolplein is leeromgeving, speelplek en kleine biotoop tegelijk. Met ruimte voor vrij spel, rust, schaduw, water, bodem, eetbare planten en lessen buiten het klaslokaal." />
-            <Card title="Natuurlessen en workshops" text="Activiteiten over bodemdiertjes, vogels, vlinders, zaden, eetbare planten, compost, seizoenen en kleine ecosystemen in de stad. Onderzoekend, toegankelijk en praktisch." />
-          </div>
-        </Section>
+    <Section className="craft">
+      <div className="craft-image"><img src="/images/beplantingsplan.jpeg" alt="Beplantingsplan voor een bostuin" /></div>
+      <div className="craft-copy"><p className="eyebrow">Vakmanschap zichtbaar</p><h2>Een plan dat ook<br />werkelijkheid wordt.</h2><p>Een goed ontwerp houdt rekening met het dagelijks gebruik én het leven op de plek. Ik verbind analyse, ontwerp, plantenkennis en begeleiding bij de uitvoering.</p><ol><li><span>01</span>Kennismaken</li><li><span>02</span>De plek lezen</li><li><span>03</span>Ontwerpen</li><li><span>04</span>Realiseren</li><li><span>05</span>Laten groeien</li></ol></div>
+      <img className="field-icon field-icon--spade" src="/images/schep.png" alt="" />
+    </Section>
 
-        <Section id="werkwijze" eyebrow="Werkwijze" title="Van kennismaking naar levende tuin">
-          <div className="steps">
-            {steps.map((step, index) => <div className="step" key={step}><strong>{index + 1}</strong><span>{step}</span></div>)}
-          </div>
-          <div className="center"><a className="button primary" href="#contact">Vraag een voorstel aan</a></div>
-        </Section>
+    <Section className="education">
+      <div className="education-copy"><p className="eyebrow">Natuureducatie</p><h2>Leren begint<br />met verwondering.</h2><p>Niet vertellen hoe natuur werkt, maar samen kijken wat er gebeurt. In tuinen, op schoolpleinen en in het landschap.</p><a className="text-link" href="#contact">Ontdek de mogelijkheden <span>→</span></a></div>
+      <figure><img src="/images/natuureducatie-water.jpg" alt="Kind onderzoekt het leven in en rond het water" /><figcaption>Onderzoeken, aanraken en zelf ontdekken.</figcaption></figure>
+    </Section>
 
-        <Section eyebrow="Voor wie" title="Voor mensen die een tuin willen die leeft" className="split">
-          <p>Voor stadstuinen, gezinstuinen, geveltuinen, groene balkons, daktuinen en schoolpleinen in Amsterdam en omgeving. Met aandacht voor kinderen, vogels, vlinders, bodemleven, regenwater en hergebruik van materialen.</p>
-          <div className="quote-card"><UsersRound /><p>“Een tuin kan tegelijk wild en verzorgd zijn. Eetbaar en sierlijk. Kindvriendelijk en rijk aan dieren.”</p></div>
-        </Section>
+    <Section className="contact" id="contact">
+      <p className="eyebrow">Een eerste stap</p><h2>Heb je een plek<br />die mag groeien?</h2><p>Vertel me over je tuin, schoolplein of idee. Dan kijken we samen wat de plek nodig heeft.</p><div className="contact-actions"><a className="button button--paper" href="mailto:hoi@lentevuur.nl">Plan een kennismaking</a><a className="text-link text-link--light" href="mailto:hoi@lentevuur.nl">Stel een vraag →</a></div>
+    </Section>
 
-        <Section id="portfolio" eyebrow="Portfolio-preview" title="Eerste beeldcases">
-          <div className="grid three">
-            {portfolioItems.map((item) => (
-              <Card key={item.title} title={item.title} text={item.text}>
-                <p className="location">{item.location}</p>
-                <div className="tags">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-              </Card>
-            ))}
-          </div>
-        </Section>
+    <Section className="about" id="over">
+      <div className="about-image"><img src="/images/portret.jpg" alt="Tuinontwerper van Lentevuur aan het werk in een tuin" /></div>
+      <div className="about-copy"><p className="eyebrow">Over Lentevuur</p><h2>Met aandacht voor<br />wat er al leeft.</h2><p className="intro">Lentevuur is een ontwerppraktijk voor groene plekken waarin mensen, planten en dieren samen ruimte krijgen.</p><p>Ik begin niet bij een stijl, maar bij de plek: de bodem, het licht, het water, de materialen en de manier waarop je er wilt leven. Vanuit die observaties ontstaat een ontwerp dat eigen voelt en met de jaren rijker wordt.</p><a className="text-link" href="#contact">Maak kennis <span>→</span></a></div>
+    </Section>
 
-        <Section eyebrow="Waarom ecologisch" title="Ontwerp, gebruik en natuur werken samen" className="muted">
-          <div className="benefits">
-            {ecologicalBenefits.map((benefit, i) => {
-              const icons = [Sprout, Flower2, Droplets, Recycle]
-              const Icon = icons[i]
-              return <div key={benefit}><Icon /><span>{benefit}</span></div>
-            })}
-          </div>
-        </Section>
-
-        <Section id="over" eyebrow="Over De Wilde Tuinvrouw" title="Deskundig, creatief, educatief en toegankelijk" className="split">
-          <div>
-            <p>Ik ben De Wilde Tuinvrouw: ecologisch tuinontwerper met liefde voor levende tuinen, lokale flora en fauna, kindvriendelijke buitenruimtes en praktische kennisoverdracht.</p>
-            <p>Ik begin niet bij stijl, maar bij de plek. Wat is er al? Wat kan blijven? Welke materialen kunnen opnieuw gebruikt worden? Welke planten passen bij deze bodem? En hoe wil jij de tuin gebruiken?</p>
-          </div>
-          <div className="feature-list compact">{focusAreas.map((area) => <span key={area}>{area}</span>)}</div>
-        </Section>
-
-        <Section id="contact" eyebrow="Contact" title="Wil je weten wat er mogelijk is met jouw tuin?" className="contact-section">
-          <div className="contact-grid">
-            <div>
-              <p>Vertel kort over je buitenruimte, schoolplein of idee. Ik lees je bericht zorgvuldig en reageer meestal binnen 2 werkdagen.</p>
-              <p>Ik neem een beperkt aantal projecten per maand aan om zorgvuldig te kunnen werken.</p>
-              <p className="work-area">Werkgebied: Amsterdam, Haarlem, Zaandam, Almere, Hilversum, Alkmaar en omgeving.</p>
-            </div>
-            <form className="mock-form">
-              <label>Naam<input placeholder="Je naam" /></label>
-              <label>E-mailadres<input placeholder="naam@example.nl" /></label>
-              <label>Gemeente<input placeholder="Bijvoorbeeld Amsterdam" /></label>
-              <label>Gewenste hulp<select><option>Tuinontwerp</option><option>Beplantingsplan</option><option>Aanlegbegeleiding</option><option>Natuureducatie</option></select></label>
-              <label>Bericht<textarea placeholder="Vertel kort over je buitenruimte, wensen, planning en budgetindicatie." /></label>
-              <button type="button" className="button primary">Start je aanvraag</button>
-            </form>
-          </div>
-        </Section>
-      </main>
-      <footer className="site-footer">
-        <div><strong>De Wilde Tuinvrouw</strong><p>Ecologisch tuinontwerp, beplantingsplannen en aanlegbegeleiding voor levende tuinen rond Amsterdam.</p></div>
-        <div><a href="#contact">Contact</a><a href="#privacy">Privacyverklaring</a><a href="#portfolio">Portfolio</a></div>
-      </footer>
-    </>
-  )
+    <footer><div className="footer-brand"><span>Lentevuur</span><p>Tuinontwerp · natuureducatie<br />· groene schoolpleinen</p></div><div className="footer-links"><a href="#werk">Projecten</a><a href="#disciplines">Wat ik doe</a><a href="#over">Over</a><a href="#contact">Contact</a></div><div className="footer-contact"><a href="mailto:hoi@lentevuur.nl">hoi@lentevuur.nl</a><p>Amsterdam en omgeving</p><small>© 2026 Lentevuur</small></div></footer>
+  </main>
 }

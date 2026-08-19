@@ -1,20 +1,12 @@
-import { Leaf } from 'lucide-react'
-import { navItems } from '../data/siteContent'
+import { useState } from 'react'
 
 export default function Header() {
-  return (
-    <header className="site-header">
-      <a className="brand" href="#home" aria-label="De Wilde Tuinvrouw home">
-        <span className="brand-mark"><Leaf size={20} /></span>
-        <span>
-          <strong>De Wilde Tuinvrouw</strong>
-          <small>Ecologisch tuinontwerp</small>
-        </span>
-      </a>
-      <nav className="main-nav" aria-label="Hoofdnavigatie">
-        {navItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
-      </nav>
-      <a className="nav-cta" href="#contact">Plan een kennismaking</a>
-    </header>
-  )
+  const [menuOpen, setMenuOpen] = useState(false)
+  return <header className="site-header">
+    <a className="wordmark" href="#top" aria-label="Lentevuur, naar boven">Lentevuur</a>
+    <nav className={menuOpen ? 'nav nav--open' : 'nav'} aria-label="Hoofdnavigatie">
+      <a href="#werk">Projecten</a><a href="#disciplines">Wat ik doe</a><a href="#over">Over</a><a href="#contact">Contact</a>
+    </nav>
+    <button className="menu" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Menu openen">{menuOpen ? 'Sluit' : 'Menu'}</button>
+  </header>
 }
