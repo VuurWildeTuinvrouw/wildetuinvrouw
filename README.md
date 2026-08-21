@@ -1,6 +1,17 @@
 # Lentevuur
 
-Eerste websiteversie voor Lentevuur, gebouwd met React en Vite.
+GitHub- en Vercel-versie van de website van Lentevuur.
+
+## Mappenindeling
+
+- `src/` — React-componenten en vormgeving
+- `public/media/` — gebruikte fotografie, illustraties en video
+- `public/fonts/` — plek voor gelicentieerde Canela-webfonts
+- `docs/` — projectdocumentatie en het volledige feedbacklogboek
+- `public/robots.txt` en `public/sitemap.xml` — zoekmachinebestanden
+- `vercel.json` — zorgt dat onder meer `/privacy` via de React-app opent
+
+`node_modules/` en `dist/` horen niet in GitHub en worden via `.gitignore` uitgesloten.
 
 ## Lokaal starten
 
@@ -9,14 +20,20 @@ npm install
 npm run dev
 ```
 
-## Productieversie bouwen
+## Productieversie controleren
 
 ```bash
 npm run build
+npm run preview
 ```
 
-De gebouwde website staat daarna in `dist/`.
+## Publiceren via GitHub en Vercel
 
-## Lettertype
+1. Upload de inhoud van deze map naar de hoofdmap van de GitHub-repository.
+2. Koppel die repository in Vercel.
+3. Vercel herkent Vite automatisch. Gebruik zo nodig:
+   - Build command: `npm run build`
+   - Output directory: `dist`
+4. Controleer na publicatie `/`, `/privacy`, `/robots.txt` en `/sitemap.xml`.
 
-Canela Trial is niet opgenomen vanwege de licentie. Zie `FONT-LICENTIE.md` voordat de website wordt gepubliceerd.
+Lees vóór publicatie ook `FONT-LICENTIE.md`.
