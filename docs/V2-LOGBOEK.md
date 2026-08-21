@@ -1,4 +1,4 @@
-# Lentevuur V2 — feedbacklogboek
+# De wilde tuinvrouw V2 — feedbacklogboek
 
 Statussen: **uitgevoerd**, **voorbereid**, **uitgesteld** of **input nodig**.
 
@@ -29,7 +29,7 @@ Statussen: **uitgevoerd**, **voorbereid**, **uitgesteld** of **input nodig**.
 
 | Feedbackpunt | Status | Verwerking in V2 |
 |---|---|---|
-| Label Lentevuur als woordmerk | Uitgevoerd | Klein label vervangen door Canela-woordmerk. |
+| Label De wilde tuinvrouw als woordmerk | Uitgevoerd | Klein label vervangen door Canela-woordmerk. |
 | Aanhalingstekens rond merkquote | Uitgevoerd | Typografische aanhalingstekens toegevoegd. |
 | Seizoensiconen testen | Voorbereid | Varen blijft voorlopig staan; seizoenswisseling kan later worden gekoppeld aan nieuw materiaal. |
 | Contactblok vroeg op de pagina | Uitgevoerd | Contactblok staat direct na het merkstatement. |

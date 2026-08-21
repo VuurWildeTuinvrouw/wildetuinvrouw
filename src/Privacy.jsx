@@ -1,12 +1,12 @@
 export default function PrivacyPage() {
   return <main className="legal-page">
-    <a className="legal-wordmark" href="/">Lentevuur</a>
+    <a className="legal-wordmark" href="/">De wilde tuinvrouw</a>
     <article>
       <p className="eyebrow">Laatst bijgewerkt: 19 augustus 2026</p>
       <h1>Privacyverklaring</h1>
-      <p className="legal-intro">Lentevuur gaat zorgvuldig om met persoonsgegevens. In deze verklaring lees je welke gegevens worden verwerkt, waarom dat gebeurt en welke rechten je hebt.</p>
+      <p className="legal-intro">De wilde tuinvrouw gaat zorgvuldig om met persoonsgegevens. In deze verklaring lees je welke gegevens worden verwerkt, waarom dat gebeurt en welke rechten je hebt.</p>
       <h2>1. Wie is verantwoordelijk?</h2>
-      <p>Lentevuur, de ontwerppraktijk van Priscilla Tienkamp, is verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in deze verklaring.</p>
+      <p>De wilde tuinvrouw, de ontwerppraktijk van Priscilla Tienkamp, is verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in deze verklaring.</p>
       <ul><li>KvK-nummer: 95981675</li><li>E-mail: <a href="mailto:info@wildetuinvrouw.nl">info@wildetuinvrouw.nl</a></li><li>Website: wildetuinvrouw.nl</li></ul>
       <h2>2. Welke gegevens worden verwerkt?</h2>
       <p>Wanneer je contact opneemt, kunnen je naam, e-mailadres, plaats en de inhoud van je bericht worden verwerkt. Bij een opdracht kunnen daarnaast gegevens worden verwerkt die nodig zijn voor een offerte, overeenkomst, uitvoering, facturatie en administratie. De hostingprovider kan technisch noodzakelijke gegevens verwerken, zoals IP-adressen en serverlogs, om de website veilig en beschikbaar te houden.</p>

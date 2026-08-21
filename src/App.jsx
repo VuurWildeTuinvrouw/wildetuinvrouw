@@ -40,7 +40,7 @@ function Home() {
 
   return <main>
     <header className="site-header">
-      <a className="wordmark" href="#top" aria-label="Lentevuur, naar boven">Lentevuur</a>
+      <a className="wordmark" href="#top" aria-label="De wilde tuinvrouw, naar boven">De wilde tuinvrouw</a>
       <nav className={menuOpen ? "nav nav--open" : "nav"} aria-label="Hoofdnavigatie">
         <a href="#werk">Projecten</a><a href="#disciplines">Expertise</a><a href="#over">Over mij</a><a href="#contact">Contact</a>
       </nav>
@@ -48,7 +48,7 @@ function Home() {
     </header>
 
     <section className="hero hero--project" id="top">
-      <img src="/media/project-stadstuin.jpg" alt="Ecologische gezinstuin in Alkmaar, ontworpen door Lentevuur" />
+      <img src="/media/project-stadstuin.jpg" alt="Ecologische gezinstuin in Alkmaar, ontworpen door De wilde tuinvrouw" />
       <div className="hero-shade" />
       <div className="hero-copy">
         <p className="kicker kicker--light">Tuinontwerp · Natuureducatie · Schrijven & onderzoek</p>
@@ -59,7 +59,7 @@ function Home() {
 
     <section className="manifest section-pad">
       <img className="field-icon field-icon--fern" src="/media/icon-hondsroos.png" alt="" />
-      <p className="section-wordmark">Lentevuur</p>
+      <p className="section-wordmark">De wilde tuinvrouw</p>
       <h2>De natuur geeft de plek haar ritme.</h2>
       <blockquote className="manifest-text">“Mensen, planten en dieren bewegen mee met de seizoenen. Daarom ontwerp ik geen plaatje, maar een levende plek — gevormd door wat er al is en wat er kan ontstaan.”</blockquote>
     </section>
@@ -75,7 +75,7 @@ function Home() {
 
     <section className="work section-pad" id="werk">
       <div className="work-heading"><p className="eyebrow">Selectie van het werk</p><h2>Van eerste lijn<br />tot levende tuin.</h2><p>Ontwerp en uitvoering horen bij elkaar. Iedere plek begint met aandachtig kijken en krijgt vorm in schetsen, materiaal en beplanting.</p></div>
-      <img className="design-trace" src="/media/project-1-digitaal-schetsontwerp.png" alt="Digitaal schetsontwerp van een tuin door Lentevuur" />
+      <img className="design-trace" src="/media/project-1-digitaal-schetsontwerp.png" alt="Digitaal schetsontwerp van een tuin door De wilde tuinvrouw" />
       <div className="project-grid">{projects.map((project) => {
         const activeSlide = projectSlides[project.title] || 0;
         const activeImage = project.images[activeSlide];
@@ -93,7 +93,7 @@ function Home() {
       })}</div>
     </section>
 
-    <section className="impression" aria-label="Impressie van het werk van Lentevuur">
+    <section className="impression" aria-label="Impressie van het werk van De wilde tuinvrouw">
       <video key={impressions[impression].src} autoPlay muted playsInline preload="metadata" onEnded={() => setImpression((impression + 1) % impressions.length)}><source src={impressions[impression].src} type="video/mp4" /></video>
       <div className="impression-shade" />
       <div className="impression-copy"><p className="eyebrow">Impressie</p><h2>{impressions[impression].label}</h2></div>
@@ -124,10 +124,10 @@ function Home() {
     </section>
 
     <section className="about section-pad" id="over">
-      <div className="about-image"><img src="/media/portret.jpg" alt="Ontwerper Priscilla Tienkamp van Lentevuur aan het werk in een tuin" /></div>
-      <div className="about-copy"><p className="eyebrow">Over Lentevuur</p><h2>Met aandacht voor<br />wat er al leeft.</h2><p className="intro">Lentevuur is de ontwerppraktijk van Priscilla Tienkamp, voor groene plekken waarin mensen, planten en dieren samen ruimte krijgen.</p><p>Ik begin niet bij een stijl, maar bij de plek: de bodem, het licht, het water, de materialen en de manier waarop je er wilt leven. Vanuit die observaties ontstaat een ontwerp dat eigen voelt en met de jaren rijker wordt.</p><a className="text-link" href="#contact">Maak kennis <span>→</span></a></div>
+      <div className="about-image"><img src="/media/portret.jpg" alt="Ontwerper Priscilla Tienkamp van De wilde tuinvrouw aan het werk in een tuin" /></div>
+      <div className="about-copy"><p className="eyebrow">Over De wilde tuinvrouw</p><h2>Met aandacht voor<br />wat er al leeft.</h2><p className="intro">De wilde tuinvrouw is de ontwerppraktijk van Priscilla Tienkamp, voor groene plekken waarin mensen, planten en dieren samen ruimte krijgen.</p><p>Ik begin niet bij een stijl, maar bij de plek: de bodem, het licht, het water, de materialen en de manier waarop je er wilt leven. Vanuit die observaties ontstaat een ontwerp dat eigen voelt en met de jaren rijker wordt.</p><a className="text-link" href="#contact">Maak kennis <span>→</span></a></div>
     </section>
 
-    <footer><div className="footer-brand"><span>Lentevuur</span><p>Tuinontwerp · groene buitenruimtes voor kinderen<br />Natuureducatie · schrijven & onderzoek</p></div><div className="footer-links"><a href="#werk">Projecten</a><a href="#disciplines">Expertise</a><a href="#over">Over mij</a><a href="#contact">Contact</a><a href="/privacy">Privacy</a><span>KvK 95981675</span></div></footer>
+    <footer><div className="footer-brand"><span>De wilde tuinvrouw</span><p>Tuinontwerp · groene buitenruimtes voor kinderen<br />Natuureducatie · schrijven & onderzoek</p></div><div className="footer-links"><a href="#werk">Projecten</a><a href="#disciplines">Expertise</a><a href="#over">Over mij</a><a href="#contact">Contact</a><a href="/privacy">Privacy</a><span>KvK 95981675</span></div></footer>
   </main>;
 }

@@ -1,6 +1,10 @@
-# Lentevuur
+# De wilde tuinvrouw
 
-GitHub- en Vercel-versie van de website van Lentevuur.
+GitHub- en Vercel-versie van de website van De wilde tuinvrouw.
+
+Deze export correspondeert met de goedgekeurde reviewversie waarin de
+merknaam volledig is aangepast en de verdikte, vuurkleurige hondsroos als
+favicon wordt gebruikt.
 
 ## Mappenindeling
 
